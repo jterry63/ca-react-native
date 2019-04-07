@@ -52,6 +52,7 @@ class LoginForm extends Component {
             <Card>
                 <CardSection>
                     <Input
+                        autoCapitalize='none'
                         label="Email"
                         placeholder="user@gmail.com"
                         value={this.state.email} 
