@@ -87,7 +87,7 @@ class LoginForm extends Component {
 
             </Card>
             <CardSection>
-                <TouchableOpacity style={{ marginLeft: 125, marginTop: 10}}><Text style={{color: 'cyan', fontWeight: 'bold'}}>Forgot password?</Text></TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 125, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>Forgot password?</Text></TouchableOpacity>
             </CardSection>
 
             <CardSection>
@@ -95,7 +95,7 @@ class LoginForm extends Component {
             </CardSection>
 
             <CardSection>
-            <TouchableOpacity style={{ marginLeft: 155, marginTop: 10}}><Text style={{color: 'cyan', fontWeight: 'bold'}}>Sign Up</Text></TouchableOpacity>
+            <TouchableOpacity style={{ marginLeft: 155, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>Sign Up</Text></TouchableOpacity>
 
             </CardSection>
             </ImageBackground>
