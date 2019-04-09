@@ -1,13 +1,16 @@
 import React from 'react';
 import { TextInput, View, Text} from 'react-native';
+import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, autoCapitalize }) => {
     const { inputStyle, labelStyle, containerStyle } = styles;
 
     return(
         <View style={containerStyle}>
-            <Text style={labelStyle}>{label}</Text>
+            
             <TextInput 
+            
+                placeholderTextColor={'rgba(255,255,255, 0.9)'}
                 secureTextEntry={secureTextEntry}
                 placeholder={placeholder}
                 autoCapitalize={autoCapitalize}
@@ -16,6 +19,7 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, autoC
                 value={value}
                 onChangeText={onChangeText}
             />
+            
         </View>
     );
 
@@ -23,12 +27,18 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry, autoC
 
 const styles = {
     inputStyle: {
-        color: '#000',
+        color: 'white',
+        borderWidth: 2,
+        
+        borderColor: 'rgba(255,255,255, 0.3)',
         paddingRight: 5,
-        paddingLeft: 5,
+        paddingLeft: 25,
         fontSize: 18,
         lineHeight: 23,
-        flex: 2
+        flex: 2,
+        height: 40,
+        borderRadius: 25
+      
     }, 
     labelStyle: {
         fontSize: 18,
