@@ -5,7 +5,16 @@ import FontAwesome, { Icons } from 'react-native-fontawesome';
 import { Button, Card, CardSection, Input, Spinner } from './common'
 
 class LoginForm extends Component {
-    state = { email: '', password: '', error: '', loading: false };
+    state = { 
+        email: '', 
+        password: '', 
+        error: '', 
+        loading: false, 
+        loginBtn: 'Log In',
+        forgotPassword: 'Forgot Password?', 
+        haveAccount: "Don't have an account yet?",
+        signUp: 'Sign Up'
+     };
 
     onButtonPress() {
         const { email, password } = this.state;
@@ -37,13 +46,22 @@ class LoginForm extends Component {
         })
     }
 
+    onSignUpClick() {
+        this.setState({
+            loginBtn: 'Sign Up',
+            forgotPassword: '',
+            haveAccount: '',
+            signUp: ''
+        })
+    }
+
     renderButton() {
         if (this.state.loading) {
             return <Spinner size='small' />
         }
 
         return (<Button onPress={this.onButtonPress.bind(this)}>
-                    Log in
+                    {this.state.loginBtn}
                 </Button>
         );
     }
@@ -87,15 +105,15 @@ class LoginForm extends Component {
 
             </Card>
             <CardSection>
-                <TouchableOpacity style={{ marginLeft: 125, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>Forgot password?</Text></TouchableOpacity>
+                <TouchableOpacity style={{ marginLeft: 125, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>{this.state.forgotPassword}</Text></TouchableOpacity>
             </CardSection>
 
             <CardSection>
-                <Text style={{color: 'white', marginTop: 100, marginLeft: 100}}>Don't have an account yet?</Text>
+                <Text style={{color: 'white', marginTop: 100, marginLeft: 100}}>{this.state.haveAccount}</Text>
             </CardSection>
 
             <CardSection>
-            <TouchableOpacity style={{ marginLeft: 155, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>Sign Up</Text></TouchableOpacity>
+            <TouchableOpacity onPress={this.onSignUpClick.bind(this)} style={{ marginLeft: 155, marginTop: 10}}><Text style={{color: 'white', fontWeight: 'bold'}}>{this.state.signUp}</Text></TouchableOpacity>
 
             </CardSection>
             </ImageBackground>
