@@ -99,6 +99,7 @@ class LoginForm extends Component {
 
             </CardSection>
             </ImageBackground>
+            
         );
     }
 }
