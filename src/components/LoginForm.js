@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, ImageBackground } from 'react-native';
 import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from './common'
 
@@ -49,6 +49,7 @@ class LoginForm extends Component {
 
     render() {
         return (
+            <ImageBackground source={{ uri: 'https://i.imgur.com/HH3twbC.png'}} style={{width: '100%', height: '100%'}}>
             <Card>
                 <CardSection>
                     <Input
@@ -79,6 +80,7 @@ class LoginForm extends Component {
                 </CardSection>
 
             </Card>
+            </ImageBackground>
         );
     }
 }
