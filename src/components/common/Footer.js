@@ -2,17 +2,16 @@
 
 import React from 'react';
 import { Text, View, Image } from 'react-native';
+import FontAwesome, { Icons } from 'react-native-fontawesome';
 
 //make a component
 
-const Header = (props) => {
+const Footer = () => {
     const { textStyle, viewStyle } = styles;
     return (
         <View style={viewStyle}>
-          <Image
-          style={{width: 145, height: 41, marginTop: 40}}
-          source={{ uri: 'https://i.imgur.com/UmZuZ9o.png'}}
-        />
+        <Text style={{ fontSize: 20, color: 'black', marginTop: 10}}><FontAwesome>{Icons.home}</FontAwesome></Text>
+       
             {/* <Text style={textStyle}>{props.headerText}</Text> */}
         </View>
     );
@@ -21,14 +20,18 @@ const Header = (props) => {
 const styles = {
     viewStyle: {
       backgroundColor: '#F8F8F8',
-      justifyContent: 'center',
+      
       alignItems: 'center',
       height: 100,
-      paddingTop: 0,
+      width: '100%',
+     
       shadowColor: '#000',
-      shadowOffset: { width: 0, height: 2 },
+      shadowOffset: { width: 0, height: -.05 },
       shadowOpacity: 0.2,
-      elevation: 2
+      position: 'absolute',
+      marginTop: 750
+    
+      
     },
     textStyle: {
       fontSize: 25
@@ -38,4 +41,4 @@ const styles = {
 
 //make the component available to other parts of the app
 
-export { Header };
+export { Footer };
