@@ -22,8 +22,6 @@ class HomePage extends Component {
 <Footer />
 </View>
 
-
-
        );
     }
 }
